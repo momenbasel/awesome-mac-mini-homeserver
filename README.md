@@ -1,5 +1,5 @@
 <p align="center">
-  <img src="assets/banner-gemini.png" alt="Awesome Mac mini Home Server" width="100%">
+  <img src="assets/banner.png" alt="Awesome Mac mini Home Server" width="100%">
 </p>
 
 # Awesome Mac mini Home Server [![Awesome](https://awesome.re/badge.svg)](https://awesome.re)

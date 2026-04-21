@@ -1,47 +1,170 @@
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1600 400" width="1600" height="400">
   <defs>
-    <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1">
-      <stop offset="0%" stop-color="#020617"/>
-      <stop offset="60%" stop-color="#0a0a0a"/>
-      <stop offset="100%" stop-color="#0c1e2e"/>
-    </linearGradient>
-    <radialGradient id="hotspot" cx="0.18" cy="0.55" r="0.45">
+    <!-- atmospheric background -->
+    <radialGradient id="bgCore" cx="0.5" cy="0.5" r="0.8">
+      <stop offset="0%" stop-color="#0f172a"/>
+      <stop offset="100%" stop-color="#020617"/>
+    </radialGradient>
+    <radialGradient id="sunrise" cx="0.18" cy="0.92" r="0.6">
       <stop offset="0%" stop-color="#22d3ee" stop-opacity="0.35"/>
+      <stop offset="45%" stop-color="#06b6d4" stop-opacity="0.08"/>
       <stop offset="100%" stop-color="#22d3ee" stop-opacity="0"/>
     </radialGradient>
-    <pattern id="grid" width="40" height="40" patternUnits="userSpaceOnUse">
-      <path d="M 40 0 L 0 0 0 40" stroke="#1e293b" stroke-width="1" fill="none"/>
+    <radialGradient id="violet" cx="0.92" cy="0.05" r="0.5">
+      <stop offset="0%" stop-color="#a855f7" stop-opacity="0.22"/>
+      <stop offset="100%" stop-color="#a855f7" stop-opacity="0"/>
+    </radialGradient>
+
+    <!-- dotted grid pattern -->
+    <pattern id="dots" x="0" y="0" width="24" height="24" patternUnits="userSpaceOnUse">
+      <circle cx="1" cy="1" r="1" fill="#334155" opacity="0.35"/>
     </pattern>
-    <filter id="softGlow" x="-50%" y="-50%" width="200%" height="200%">
-      <feGaussianBlur stdDeviation="5"/>
+
+    <!-- diagonal line pattern for left slab -->
+    <pattern id="lines" x="0" y="0" width="8" height="8" patternUnits="userSpaceOnUse" patternTransform="rotate(45)">
+      <line x1="0" y1="0" x2="0" y2="8" stroke="#0ea5e9" stroke-width="0.5" opacity="0.08"/>
+    </pattern>
+
+    <!-- glow filter -->
+    <filter id="glowStrong" x="-50%" y="-50%" width="200%" height="200%">
+      <feGaussianBlur stdDeviation="6"/>
       <feMerge><feMergeNode/><feMergeNode in="SourceGraphic"/></feMerge>
     </filter>
+    <filter id="glowSoft" x="-50%" y="-50%" width="200%" height="200%">
+      <feGaussianBlur stdDeviation="3"/>
+      <feMerge><feMergeNode/><feMergeNode in="SourceGraphic"/></feMerge>
+    </filter>
+
+    <!-- text gradient -->
+    <linearGradient id="textGrad" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0%" stop-color="#ffffff"/>
+      <stop offset="100%" stop-color="#cbd5e1"/>
+    </linearGradient>
+    <linearGradient id="accentGrad" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0%" stop-color="#22d3ee"/>
+      <stop offset="100%" stop-color="#a78bfa"/>
+    </linearGradient>
+
+    <!-- mac mini faces -->
+    <linearGradient id="miniTop" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#f1f5f9"/>
+      <stop offset="100%" stop-color="#cbd5e1"/>
+    </linearGradient>
+    <linearGradient id="miniLeft" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0%" stop-color="#64748b"/>
+      <stop offset="100%" stop-color="#475569"/>
+    </linearGradient>
+    <linearGradient id="miniRight" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0%" stop-color="#475569"/>
+      <stop offset="100%" stop-color="#334155"/>
+    </linearGradient>
   </defs>
 
-  <rect width="1600" height="400" fill="url(#bg)"/>
-  <rect width="1600" height="400" fill="url(#grid)"/>
-  <rect width="1600" height="400" fill="url(#hotspot)"/>
+  <!-- background stack -->
+  <rect width="1600" height="400" fill="url(#bgCore)"/>
+  <rect width="1600" height="400" fill="url(#dots)"/>
+  <rect width="1600" height="400" fill="url(#violet)"/>
+  <rect width="1600" height="400" fill="url(#sunrise)"/>
 
-  <!-- Left: isometric Mac mini with tendrils -->
-  <g transform="translate(280 220) scale(1.1)">
-    <polygon points="-120,-30 0,-80 120,-30 0,20" fill="#f3f4f6" stroke="#22d3ee" stroke-width="2"/>
-    <polygon points="-120,-30 0,20 0,70 -120,20" fill="#cbd5e1" stroke="#22d3ee" stroke-width="2"/>
-    <polygon points="120,-30 0,20 0,70 120,20" fill="#9ca3af" stroke="#22d3ee" stroke-width="2"/>
-    <circle cx="70" cy="-7" r="4" fill="#22d3ee" filter="url(#softGlow)"/>
-    <g stroke="#22d3ee" stroke-width="3" fill="none" stroke-linecap="round" filter="url(#softGlow)">
-      <path d="M 0 -80 C 0 -140 -60 -160 -90 -190"/>
-      <path d="M 0 -80 C 0 -140 60 -160 90 -190"/>
-      <path d="M 0 -80 C 0 -130 0 -160 0 -200"/>
-      <circle cx="-90" cy="-190" r="5" fill="#22d3ee"/>
-      <circle cx="90" cy="-190" r="5" fill="#22d3ee"/>
-      <circle cx="0" cy="-200" r="5" fill="#22d3ee"/>
+  <!-- diagonal accent slab left -->
+  <polygon points="0,0 520,0 380,400 0,400" fill="url(#lines)"/>
+
+  <!-- top border glow line -->
+  <line x1="0" y1="1" x2="1600" y2="1" stroke="url(#accentGrad)" stroke-width="2"/>
+
+  <!-- ILLUSTRATION: network of agents around the Mac mini -->
+  <g transform="translate(275 255)">
+    <!-- floor glow -->
+    <ellipse cx="0" cy="80" rx="190" ry="24" fill="#22d3ee" opacity="0.28" filter="url(#glowStrong)"/>
+
+    <!-- connection lines to nodes (behind mini) -->
+    <g stroke="#22d3ee" stroke-width="1.4" fill="none" stroke-linecap="round" opacity="0.55">
+      <path d="M -30 -50 Q -100 -110 -165 -155"/>
+      <path d="M -10 -60 Q -30 -120 -55 -185"/>
+      <path d="M 10 -60 Q 30 -120 55 -185"/>
+      <path d="M 30 -50 Q 100 -110 165 -155"/>
+      <path d="M 50 -20 Q 140 -50 200 -70"/>
+      <path d="M -50 -20 Q -140 -50 -200 -70"/>
+    </g>
+
+    <!-- Mac mini isometric puck -->
+    <g filter="url(#glowSoft)">
+      <polygon points="-140,-20 0,-78 140,-20 0,38" fill="url(#miniTop)" stroke="#22d3ee" stroke-width="1.2" stroke-opacity="0.7"/>
+      <polygon points="-140,-20 0,38 0,88 -140,30" fill="url(#miniLeft)" stroke="#22d3ee" stroke-width="1" stroke-opacity="0.55"/>
+      <polygon points="140,-20 0,38 0,88 140,30" fill="url(#miniRight)" stroke="#22d3ee" stroke-width="1" stroke-opacity="0.55"/>
+      <!-- power LED -->
+      <circle cx="100" cy="10" r="3" fill="#22d3ee"/>
+    </g>
+
+    <!-- agent nodes -->
+    <g filter="url(#glowStrong)">
+      <circle cx="-165" cy="-155" r="7" fill="#22d3ee"/>
+      <circle cx="-55" cy="-185" r="7" fill="#22d3ee"/>
+      <circle cx="55" cy="-185" r="7" fill="#a78bfa"/>
+      <circle cx="165" cy="-155" r="7" fill="#22d3ee"/>
+      <circle cx="200" cy="-70" r="6" fill="#a78bfa"/>
+      <circle cx="-200" cy="-70" r="6" fill="#22d3ee"/>
+    </g>
+
+    <!-- node labels (positioned just inside the banner edges) -->
+    <g font-family="'JetBrains Mono', monospace" font-size="11" fill="#64748b">
+      <text x="-180" y="-165" text-anchor="end">ollama</text>
+      <text x="-70" y="-195" text-anchor="end">claude</text>
+      <text x="70" y="-195">mcp</text>
+      <text x="180" y="-165">agents</text>
+      <text x="215" y="-65">launchd</text>
+      <text x="-215" y="-65" text-anchor="end">homekit</text>
     </g>
   </g>
 
-  <!-- Right: text -->
-  <g font-family="'SF Pro Display', 'Helvetica Neue', Arial, sans-serif">
-    <text x="520" y="180" fill="#f8fafc" font-size="76" font-weight="800" letter-spacing="2">AWESOME MAC MINI</text>
-    <text x="520" y="260" fill="#f8fafc" font-size="76" font-weight="800" letter-spacing="2">HOME SERVER</text>
-    <text x="522" y="310" fill="#22d3ee" font-size="26" font-weight="500" letter-spacing="4">AGENTIC AI  ·  SELF-HOSTED  ·  ALWAYS ON</text>
+  <!-- TYPOGRAPHY -->
+  <g font-family="'Inter', -apple-system, BlinkMacSystemFont, 'Helvetica Neue', Arial, sans-serif">
+    <!-- small chip / eyebrow -->
+    <g transform="translate(560 75)">
+      <rect x="0" y="-18" width="320" height="28" rx="14" fill="#22d3ee" fill-opacity="0.08" stroke="#22d3ee" stroke-opacity="0.35" stroke-width="1"/>
+      <circle cx="16" cy="-4" r="3" fill="#22d3ee" filter="url(#glowSoft)"/>
+      <text x="30" y="0" fill="#67e8f9" font-size="11" font-weight="700" letter-spacing="3">CURATED · AGENTIC · OPEN SOURCE</text>
+    </g>
+
+    <!-- headline -->
+    <text x="560" y="175" fill="url(#textGrad)" font-size="78" font-weight="800" letter-spacing="-2">Awesome Mac mini</text>
+    <text x="560" y="255" font-size="78" font-weight="800" letter-spacing="-2">
+      <tspan fill="url(#textGrad)">Home Server</tspan><tspan fill="url(#accentGrad)">.</tspan>
+    </text>
+
+    <!-- subtitle -->
+    <text x="562" y="300" fill="#94a3b8" font-size="19" font-weight="500">The only curated list for turning an Apple Silicon Mac mini into a 24/7 AI home server.</text>
+
+    <!-- bottom info strip: monospaced bullets -->
+    <g font-family="'JetBrains Mono', ui-monospace, monospace" font-size="13" font-weight="500">
+      <g transform="translate(562 345)">
+        <!-- bullet 1 -->
+        <circle cx="5" cy="-4" r="3" fill="#22d3ee"/>
+        <text x="16" y="0" fill="#cbd5e1">260+ tools</text>
+        <!-- separator -->
+        <text x="110" y="0" fill="#334155">·</text>
+        <!-- bullet 2 -->
+        <circle cx="125" cy="-4" r="3" fill="#22d3ee"/>
+        <text x="136" y="0" fill="#cbd5e1">32 categories</text>
+        <!-- separator -->
+        <text x="248" y="0" fill="#334155">·</text>
+        <!-- bullet 3 -->
+        <circle cx="263" cy="-4" r="3" fill="#a78bfa"/>
+        <text x="274" y="0" fill="#cbd5e1">3 one-command stacks</text>
+        <!-- separator -->
+        <text x="446" y="0" fill="#334155">·</text>
+        <!-- bullet 4 -->
+        <circle cx="461" cy="-4" r="3" fill="#22d3ee"/>
+        <text x="472" y="0" fill="#cbd5e1">5W idle</text>
+      </g>
+    </g>
   </g>
+
+  <!-- right-edge version tag -->
+  <g transform="translate(1530 40)" font-family="'JetBrains Mono', monospace" font-size="11" fill="#475569">
+    <text text-anchor="end">v2026.04</text>
+  </g>
+
+  <!-- bottom hairline -->
+  <rect x="0" y="398" width="1600" height="2" fill="url(#accentGrad)" opacity="0.4"/>
 </svg>
