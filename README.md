@@ -1,3 +1,7 @@
+<p align="center">
+  <img src="assets/banner.svg" alt="Awesome Mac mini Home Server" width="100%">
+</p>
+
 # Awesome Mac mini Home Server [![Awesome](https://awesome.re/badge.svg)](https://awesome.re)
 
 > A curated list of tools, guides, and projects for running an Apple Silicon Mac mini as a 24/7 home server, with agentic AI as the headline focus.

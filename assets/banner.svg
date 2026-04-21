@@ -1,0 +1,47 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1600 400" width="1600" height="400">
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#020617"/>
+      <stop offset="60%" stop-color="#0a0a0a"/>
+      <stop offset="100%" stop-color="#0c1e2e"/>
+    </linearGradient>
+    <radialGradient id="hotspot" cx="0.18" cy="0.55" r="0.45">
+      <stop offset="0%" stop-color="#22d3ee" stop-opacity="0.35"/>
+      <stop offset="100%" stop-color="#22d3ee" stop-opacity="0"/>
+    </radialGradient>
+    <pattern id="grid" width="40" height="40" patternUnits="userSpaceOnUse">
+      <path d="M 40 0 L 0 0 0 40" stroke="#1e293b" stroke-width="1" fill="none"/>
+    </pattern>
+    <filter id="softGlow" x="-50%" y="-50%" width="200%" height="200%">
+      <feGaussianBlur stdDeviation="5"/>
+      <feMerge><feMergeNode/><feMergeNode in="SourceGraphic"/></feMerge>
+    </filter>
+  </defs>
+
+  <rect width="1600" height="400" fill="url(#bg)"/>
+  <rect width="1600" height="400" fill="url(#grid)"/>
+  <rect width="1600" height="400" fill="url(#hotspot)"/>
+
+  <!-- Left: isometric Mac mini with tendrils -->
+  <g transform="translate(280 220) scale(1.1)">
+    <polygon points="-120,-30 0,-80 120,-30 0,20" fill="#f3f4f6" stroke="#22d3ee" stroke-width="2"/>
+    <polygon points="-120,-30 0,20 0,70 -120,20" fill="#cbd5e1" stroke="#22d3ee" stroke-width="2"/>
+    <polygon points="120,-30 0,20 0,70 120,20" fill="#9ca3af" stroke="#22d3ee" stroke-width="2"/>
+    <circle cx="70" cy="-7" r="4" fill="#22d3ee" filter="url(#softGlow)"/>
+    <g stroke="#22d3ee" stroke-width="3" fill="none" stroke-linecap="round" filter="url(#softGlow)">
+      <path d="M 0 -80 C 0 -140 -60 -160 -90 -190"/>
+      <path d="M 0 -80 C 0 -140 60 -160 90 -190"/>
+      <path d="M 0 -80 C 0 -130 0 -160 0 -200"/>
+      <circle cx="-90" cy="-190" r="5" fill="#22d3ee"/>
+      <circle cx="90" cy="-190" r="5" fill="#22d3ee"/>
+      <circle cx="0" cy="-200" r="5" fill="#22d3ee"/>
+    </g>
+  </g>
+
+  <!-- Right: text -->
+  <g font-family="'SF Pro Display', 'Helvetica Neue', Arial, sans-serif">
+    <text x="520" y="180" fill="#f8fafc" font-size="76" font-weight="800" letter-spacing="2">AWESOME MAC MINI</text>
+    <text x="520" y="260" fill="#f8fafc" font-size="76" font-weight="800" letter-spacing="2">HOME SERVER</text>
+    <text x="522" y="310" fill="#22d3ee" font-size="26" font-weight="500" letter-spacing="4">AGENTIC AI  ·  SELF-HOSTED  ·  ALWAYS ON</text>
+  </g>
+</svg>
