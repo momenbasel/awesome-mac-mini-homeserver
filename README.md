@@ -120,26 +120,22 @@ chmod +x install.sh
 
 Review [`install.sh`](install.sh) before running. Idempotent: safe to re-run. See [docs/agentic-quickstart.md](docs/agentic-quickstart.md) for the opinionated agentic build.
 
-```text
-+------------------------------------------------------------+
-|                                                            |
-|        AWESOME  MAC  MINI  HOME  SERVER  INSTALLER         |
-|                                                            |
-|         Agentic AI  -  Media  -  Self-Hosted Apps          |
-|                                                            |
-+------------------------------------------------------------+
+### See it in action
 
-Pick a stack to install (numbers separated by commas, e.g. 1,3 or all):
+<p align="center">
+  <img src="assets/screenshots/01-menu.png" alt="install.sh main menu - Apple Silicon detected, Homebrew confirmed, three numbered stack options (Agentic AI, Media Server, Self-Hosted Apps)" width="820">
+  <br><em>Pick a stack. One command. Idempotent.</em>
+</p>
 
-   1  Agentic AI          Ollama, Claude Code, Aider, Open WebUI, Langfuse,
-                          Whisper.cpp, Jan, LM Studio, Enchanted, Msty
+<p align="center">
+  <img src="assets/screenshots/02-agentic-running.png" alt="install.sh running the Agentic AI stack - Homebrew installs Ollama, Whisper.cpp, LM Studio, Jan, Msty, then pipx installs Aider, pulls llama3.2:3b model, and docker-compose spins up Open WebUI + Langfuse" width="820">
+  <br><em>Running <code>./install.sh agentic</code> - brew + pipx + ollama pull + docker compose, all handled.</em>
+</p>
 
-   2  Media Server        Jellyfin (native), Sonarr, Radarr, Prowlarr,
-                          Bazarr, qBittorrent, Transmission
-
-   3  Self-Hosted Apps    Vaultwarden, Paperless-ngx, Gitea,
-                          Homepage dashboard
-```
+<p align="center">
+  <img src="assets/screenshots/03-done.png" alt="install.sh completion screen - lists reachable URLs for Ollama, Open WebUI, Langfuse, and reminder commands for Claude Code and Aider" width="820">
+  <br><em>Done - your agents are live at these URLs.</em>
+</p>
 
 Non-interactive: `./install.sh agentic` / `media` / `selfhosted` / `all`.
 
