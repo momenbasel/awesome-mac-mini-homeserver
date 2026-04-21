@@ -93,20 +93,42 @@ Pick a stack to install (numbers separated by commas, e.g. 1,3 or all):
 
 Non-interactive: `./install.sh agentic` / `media` / `selfhosted` / `all`.
 
+### Stack components at a glance
+
+**Agentic AI**
+![Ollama](https://img.shields.io/badge/Ollama-000000?style=for-the-badge&logo=ollama&logoColor=white)
+![Claude](https://img.shields.io/badge/Claude_Code-D97706?style=for-the-badge&logo=anthropic&logoColor=white)
+![OpenWebUI](https://img.shields.io/badge/Open_WebUI-000000?style=for-the-badge&logo=openai&logoColor=white)
+![Langfuse](https://img.shields.io/badge/Langfuse-0A0A0A?style=for-the-badge)
+![Whisper](https://img.shields.io/badge/whisper.cpp-412991?style=for-the-badge&logo=openai&logoColor=white)
+
+**Media Server**
+![Jellyfin](https://img.shields.io/badge/Jellyfin-00A4DC?style=for-the-badge&logo=jellyfin&logoColor=white)
+![Sonarr](https://img.shields.io/badge/Sonarr-2596BE?style=for-the-badge)
+![Radarr](https://img.shields.io/badge/Radarr-FFCA28?style=for-the-badge)
+![Prowlarr](https://img.shields.io/badge/Prowlarr-E37100?style=for-the-badge)
+![qBittorrent](https://img.shields.io/badge/qBittorrent-2F67BA?style=for-the-badge&logo=qbittorrent&logoColor=white)
+
+**Self-Hosted Apps**
+![Vaultwarden](https://img.shields.io/badge/Vaultwarden-175DDC?style=for-the-badge&logo=bitwarden&logoColor=white)
+![Paperless](https://img.shields.io/badge/Paperless-17541F?style=for-the-badge)
+![Gitea](https://img.shields.io/badge/Gitea-609926?style=for-the-badge&logo=gitea&logoColor=white)
+![Homepage](https://img.shields.io/badge/Homepage-0F172A?style=for-the-badge)
+
 ---
 
 ## Legend
 
 Tags appear at the end of each entry in square brackets.
 
-| Tag | Meaning |
-|---|---|
-| `[AS]` | Apple Silicon only |
-| `[Intel]` | Intel Mac only |
-| `[U]` | Universal binary |
-| `[D]` | Runs via Docker |
-| `[N]` | macOS native |
-| `[P]` | Paid or freemium |
+| Badge | Tag | Meaning |
+|---|---|---|
+| ![Apple Silicon](https://img.shields.io/badge/Apple_Silicon-000000?style=flat-square&logo=apple&logoColor=white) | `[AS]` | Apple Silicon only |
+| ![Intel](https://img.shields.io/badge/Intel-0071C5?style=flat-square&logo=intel&logoColor=white) | `[Intel]` | Intel Mac only |
+| ![Universal](https://img.shields.io/badge/Universal-636363?style=flat-square&logo=apple&logoColor=white) | `[U]` | Universal binary |
+| ![Docker](https://img.shields.io/badge/Docker-2496ED?style=flat-square&logo=docker&logoColor=white) | `[D]` | Runs via Docker |
+| ![macOS](https://img.shields.io/badge/Native-000000?style=flat-square&logo=apple&logoColor=white) | `[N]` | macOS native |
+| ![Paid](https://img.shields.io/badge/Paid-DAA520?style=flat-square&logo=stripe&logoColor=white) | `[P]` | Paid or freemium |
 
 ---
 
