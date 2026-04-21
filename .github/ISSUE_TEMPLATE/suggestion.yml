@@ -1,0 +1,45 @@
+name: Suggest an entry
+description: Suggest a tool to add to the list
+title: "[suggestion]: "
+labels: ["suggestion"]
+body:
+  - type: input
+    id: name
+    attributes:
+      label: Tool name
+    validations:
+      required: true
+  - type: input
+    id: url
+    attributes:
+      label: HTTPS URL
+    validations:
+      required: true
+  - type: textarea
+    id: description
+    attributes:
+      label: One-sentence description
+      description: Sentence case, ends with a period.
+    validations:
+      required: true
+  - type: dropdown
+    id: section
+    attributes:
+      label: Proposed section
+      options:
+        - Agentic AI
+        - Hardware
+        - OS and base setup
+        - Remote access
+        - Containers and virtualization
+        - Media servers
+        - Storage and NAS
+        - Self-hosted apps
+        - Smart home
+        - Monitoring and observability
+        - Security
+        - CI/CD and build farms
+        - Networking
+        - Other
+    validations:
+      required: true

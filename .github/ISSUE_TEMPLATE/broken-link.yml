@@ -1,0 +1,21 @@
+name: Report a broken link
+description: An entry points to a dead or moved URL
+title: "[broken]: "
+labels: ["broken-link"]
+body:
+  - type: input
+    id: entry
+    attributes:
+      label: Which entry?
+    validations:
+      required: true
+  - type: input
+    id: old_url
+    attributes:
+      label: Old URL
+    validations:
+      required: true
+  - type: input
+    id: new_url
+    attributes:
+      label: Suggested replacement URL

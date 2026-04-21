@@ -1,0 +1,29 @@
+name: lint
+
+on:
+  pull_request:
+  push:
+    branches: [main]
+  schedule:
+    - cron: '0 6 * * 1'
+
+jobs:
+  awesome-lint:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '20'
+      - name: Run awesome-lint
+        run: npx awesome-lint || true
+
+  link-check:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - name: Link check
+        uses: lycheeverse/lychee-action@v2
+        with:
+          args: --verbose --no-progress --max-concurrency 4 './**/*.md'
+          fail: false
