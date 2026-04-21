@@ -1,10 +1,41 @@
 <p align="center">
-  <img src="assets/banner.png" alt="Awesome Mac mini Home Server" width="100%">
+  <img src="assets/banner.png" alt="Awesome Mac mini Home Server - Turn an Apple Silicon Mac mini into a 24/7 agentic AI home server" width="100%">
 </p>
 
-# Awesome Mac mini Home Server [![Awesome](https://awesome.re/badge.svg)](https://awesome.re)
+<h1 align="center">Awesome Mac mini Home Server</h1>
 
-> A curated list of tools, guides, and projects for running an Apple Silicon Mac mini as a 24/7 home server, with agentic AI as the headline focus.
+<p align="center">
+  <a href="https://awesome.re"><img src="https://awesome.re/badge.svg" alt="Awesome"></a>
+  <a href="https://github.com/momenbasel/awesome-mac-mini-homeserver/stargazers"><img src="https://img.shields.io/github/stars/momenbasel/awesome-mac-mini-homeserver?style=flat&logo=github&color=yellow" alt="Stars"></a>
+  <a href="https://github.com/momenbasel/awesome-mac-mini-homeserver/network/members"><img src="https://img.shields.io/github/forks/momenbasel/awesome-mac-mini-homeserver?style=flat&logo=github&color=blue" alt="Forks"></a>
+  <a href="LICENSE"><img src="https://img.shields.io/badge/License-CC0--1.0-lightgrey.svg?style=flat" alt="License"></a>
+  <a href="CONTRIBUTING.md"><img src="https://img.shields.io/badge/PRs-welcome-brightgreen.svg?style=flat" alt="PRs Welcome"></a>
+  <a href="https://momenbasel.github.io/awesome-mac-mini-homeserver/"><img src="https://img.shields.io/badge/website-live-22d3ee?style=flat&logo=github" alt="Website"></a>
+</p>
+
+<p align="center"><strong>A curated list of tools, guides, and projects for running an Apple Silicon Mac mini as a 24/7 home server, with agentic AI as the headline focus.</strong></p>
+
+<p align="center">
+  <a href="https://twitter.com/intent/tweet?url=https%3A%2F%2Fgithub.com%2Fmomenbasel%2Fawesome-mac-mini-homeserver&text=Turn%20your%20Mac%20mini%20into%20a%2024%2F7%20agentic%20AI%20home%20server.%20260%2B%20curated%20tools%2C%20one-command%20installer.&hashtags=MacMini%2CSelfHosted%2CLocalLLM%2CAgenticAI">
+    <img alt="Share on Twitter" src="https://img.shields.io/badge/Share_on-Twitter-1DA1F2?style=for-the-badge&logo=x&logoColor=white">
+  </a>
+  <a href="https://www.linkedin.com/sharing/share-offsite/?url=https%3A%2F%2Fgithub.com%2Fmomenbasel%2Fawesome-mac-mini-homeserver">
+    <img alt="Share on LinkedIn" src="https://img.shields.io/badge/Share_on-LinkedIn-0A66C2?style=for-the-badge&logo=linkedin&logoColor=white">
+  </a>
+  <a href="https://www.reddit.com/submit?url=https%3A%2F%2Fgithub.com%2Fmomenbasel%2Fawesome-mac-mini-homeserver&title=Awesome%20Mac%20mini%20Home%20Server%20-%20260%2B%20curated%20tools%20for%20agentic%20AI%20on%20Apple%20Silicon">
+    <img alt="Share on Reddit" src="https://img.shields.io/badge/Share_on-Reddit-FF4500?style=for-the-badge&logo=reddit&logoColor=white">
+  </a>
+  <a href="https://news.ycombinator.com/submitlink?u=https%3A%2F%2Fgithub.com%2Fmomenbasel%2Fawesome-mac-mini-homeserver&t=Awesome%20Mac%20mini%20Home%20Server">
+    <img alt="Share on Hacker News" src="https://img.shields.io/badge/Share_on-HN-FF6600?style=for-the-badge&logo=ycombinator&logoColor=white">
+  </a>
+  <a href="https://github.com/momenbasel/awesome-mac-mini-homeserver/discussions">
+    <img alt="Join Discussions" src="https://img.shields.io/badge/Join-Discussions-0969DA?style=for-the-badge&logo=github&logoColor=white">
+  </a>
+</p>
+
+<p align="center">
+  <em>If this list saves you time, please <a href="https://github.com/momenbasel/awesome-mac-mini-homeserver/stargazers">star the repo</a> - it genuinely helps other Mac mini owners discover it.</em>
+</p>
 
 ## What is this, in plain English?
 
