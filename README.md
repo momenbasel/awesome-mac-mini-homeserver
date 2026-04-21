@@ -112,6 +112,16 @@ Pick a stack to install (numbers separated by commas, e.g. 1,3 or all):
 
 Non-interactive: `./install.sh agentic` / `media` / `selfhosted` / `all`.
 
+### Time Machine server for the whole household
+
+Turn the mini's external drive into a shared Time Machine destination every Mac on the LAN can back up to:
+
+```bash
+sudo ./scripts/time-machine-server.sh /Volumes/YourExternalDrive
+```
+
+One command. APFS/HFS+ aware. SMB + Bonjour discovery. Optional per-Mac quota via `QUOTA_GB=500`.
+
 ### Stack components at a glance
 
 **Agentic AI**
